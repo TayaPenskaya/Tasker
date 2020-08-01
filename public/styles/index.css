@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-areas: "add list list sort";
+}
+
+.tasks-list {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto auto auto;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin: auto;
+    width: 80%;
+}
+
+.task:nth-child(2n+1) {
+    background: lightgray;
+}
+
+.task:nth-child(2n):last-child {
+    border-color: gray;
+}
+
+.task:first-child {
+    border-top: 1px solid gray;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    background: bisque;
+}
+
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: bisque;
+}
+
+
+.form-for-new-task > h3 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form > input[type="text"] {
+    margin: 5px;
+    padding: 2px;
+}
+
+input[type="submit"] {
+    background: lightgreen;
+    width: 100px;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.error {
+    font-size: 30px;
+}
+
+.error:first-line {
+    color: darkred;
+}
+
+input[type="submit"].table-btn {
+    padding: 4px;
+    width: 20px;
+    border-radius: 20%;
+}
+
+input[type="submit"].delete-btn {
+    background: red;
+}
+
+input[type="submit"].check-plus {
+    background: lightgreen;
+}
+
+input[type="submit"].check-minus {
+    background: powderblue;
+}
+
+.go-login {
+    position: absolute;
+    right: 80px;
+}
+
+input[type="submit"].go-login-btn {
+    width: 150px;
+    padding: 10px;
+    background: lightgray;
+    border-color: lightgray;
+}
+
+.login-form {
+    margin: 20px auto;
+}
+
+.hello:first-line {
+    color: darkorange;
+}
