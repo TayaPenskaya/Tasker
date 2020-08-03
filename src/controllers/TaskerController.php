@@ -39,7 +39,15 @@ class TaskerController extends Controller {
             }
             $this->model->update();
         }
-        $params = ['tasks' => $this->model->getTasker()->getTaskList()];
+        $isAdmin = false;
+        if (file_exists("src/data/admin.json")) {
+            $arr = json_decode(file_get_contents("src/data/admin.json"));
+            $params = get_object_vars($arr[0]);
+            if ($params["logged"]) {
+                $isAdmin = true;
+            }
+        }
+        $params = ['tasks' => $this->model->getTasker()->getTaskList(), 'isAdmin' => $isAdmin];
         $this->view->render($params);
     }
 

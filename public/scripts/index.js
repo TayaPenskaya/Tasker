@@ -1,4 +1,5 @@
-document.getElementById("byName").addEventListener("change", () => {
+document.getElementById("byName")
+    .addEventListener("click", () => {
         document.getElementById("sort-form").submit();
     });
 

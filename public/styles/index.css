@@ -129,22 +129,32 @@ input[type="submit"].check-minus {
     background: powderblue;
 }
 
-.go-login {
-    position: absolute;
-    right: 80px;
-}
-
-input[type="submit"].go-login-btn {
-    width: 150px;
-    padding: 10px;
-    background: lightgray;
-    border-color: lightgray;
-}
-
 .login-form {
     margin: 20px auto;
 }
 
 .hello:first-line {
     color: darkorange;
+}
+
+.right {
+    position: absolute;
+    right: 80px;
+}
+
+input[type="submit"].gray {
+    width: 150px;
+    padding: 10px;
+    background: lightgray;
+    border-color: lightgray;
+    font-size: 15px;
+    margin: 20px auto;
+}
+
+input[type="submit"].go-logout-btn {
+    margin: 10px auto;
+}
+
+input[type="submit"].error-tasks-btn {
+    margin-top: 10px;
 }

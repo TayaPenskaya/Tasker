@@ -25,6 +25,10 @@ class Constants {
         'admin/hello' => [
             'controller' => 'admin',
             'action' => 'hello'
+        ],
+        'admin/logout' => [
+            'controller' => 'admin',
+            'action' => 'logout'
         ]
     ];
     const happyControllerMessage = 'Controller performed the action!';

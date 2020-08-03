@@ -1,8 +1,17 @@
 <header>
     <h2>List of tasks</h2>
-    <form action="/account/login" method="post" class="go-login">
-        <input type="submit" value="Go to login page" class="go-login-btn">
-    </form>
+    <?php if ($isAdmin) :?>
+        <div class="form right">
+            <p class="admin-text"> You are logged in as admin </p>
+            <form action="/admin/logout" class="go-logout">
+                <input type="submit" value="Go to logout page" class="gray go-logout-btn">
+            </form>
+        </div>
+    <?php else : ?>
+        <form action="/account/login" method="post" class="right go-login">
+            <input type="submit" value="Go to login page" class="gray go-login-btn">
+        </form>
+    <?php endif; ?>
 </header>
 
 <div class="grid-box">
@@ -51,7 +60,7 @@
 
     <div class="wrapper-form form-for-sorting-tasks">
         <h3>Sorting</h3>
-        <form method="post" class="sort-form" id="form sort-form">
+        <form method="post" class="form sort-form" id="sort-form">
             <div>
                 <input type="radio" id="byName" name="sort" value="name" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "name") echo "checked"?>>
                 <label for="byName">By name</label>

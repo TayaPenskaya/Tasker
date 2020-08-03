@@ -7,7 +7,7 @@ use App\Core\Controller;
 class MainController extends Controller {
 
     public function start() {
-        $this->view->render();
+        $this->view->redirect('/tasks/show');
     }
 
 }

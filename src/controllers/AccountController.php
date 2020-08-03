@@ -16,17 +16,30 @@ class AccountController extends Controller {
                 $pass = $_POST["password"];
                 if (file_exists("src/data/admin.json")) {
                     $arr = json_decode(file_get_contents("src/data/admin.json"));
-                    for ($i = 0; $i < count($arr); ++$i) {
-                        $params = get_object_vars($arr[$i]);
-                        if ($login == $params["login"] & $pass == $params["password"]) {
-                            $this->view->redirect("/admin/hello");
-                        }
+                    $params = get_object_vars($arr[0]);
+                    if ($login == $params["login"] & $pass == $params["password"]) {
+                        $params["logged"] = true;
+                        $arr[0] = $params;
+                        file_put_contents("src/data/admin.json", json_encode($arr));
+                        $this->view->redirect("/admin/hello");
                     }
                 }
                 View::error("Incorrect data in order to log in.");
             }
         }
-        $this->view->render();
+        $isAdmin = false;
+        if (file_exists("src/data/admin.json")) {
+            $arr = json_decode(file_get_contents("src/data/admin.json"));
+            $params = get_object_vars($arr[0]);
+            if ($params["logged"]) {
+                $isAdmin = true;
+            }
+        }
+        if (!$isAdmin) {
+            $this->view->render($params);
+        } else {
+            $this->view->redirect('/admin/logout');
+        }
     }
 
 }
