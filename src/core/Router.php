@@ -39,7 +39,7 @@ class Router {
     public function run() {
         try {
             if ($this->match()) {
-                $path = 'App\Controllers\\'.ucfirst($this->params['controller']).'Controller';
+                $path = 'App\controllers\\'.ucfirst($this->params['controller']).'Controller';
                 if (class_exists($path)){
                     $action = $this->params['action'];
                     if (method_exists($path, $action)) {
