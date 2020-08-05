@@ -3,10 +3,10 @@
 
 namespace App\controllers;
 
-
+use App\core\Controller;
 use App\core\View;
 
-class AdminController extends \App\Core\Controller {
+class AdminController extends Controller {
 
     public function hello() {
         $this->view->render();
