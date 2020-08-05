@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace App\Models;
+namespace App\models;
 
-use App\Models\Constants;
+use App\models\Constants;
 class Validation {
 
     public static function isValidEmail(string $email) : bool {

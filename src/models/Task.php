@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
-namespace App\Models;
+namespace App\models;
 
-use App\Exceptions\ModelExceptions\InvalidEmailException;
-use App\Exceptions\ModelExceptions\InvalidNameException;
+use App\exceptions\ModelExceptions\InvalidEmailException;
+use App\exceptions\ModelExceptions\InvalidNameException;
 
 class Task {
     private string $name;

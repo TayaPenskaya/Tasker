@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Core;
+namespace App\core;
 
-use App\Config\Constants;
-use App\Exceptions\RouterExceptions\NoSuchActionException;
-use App\Exceptions\RouterExceptions\NoSuchControllerException;
-use App\Exceptions\RouterExceptions\NoSuchRouteException;
+use App\config\Constants;
+use App\exceptions\RouterExceptions\NoSuchActionException;
+use App\exceptions\RouterExceptions\NoSuchControllerException;
+use App\exceptions\RouterExceptions\NoSuchRouteException;
 use Exception;
 
 class Router {

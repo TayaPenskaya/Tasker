@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Controllers;
+namespace App\controllers;
 
-use App\Core\Controller;
+use App\core\Controller;
 class MainController extends Controller {
 
     public function start() {

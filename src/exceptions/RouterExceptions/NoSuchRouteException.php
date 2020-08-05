@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Exceptions\RouterExceptions;
+namespace App\exceptions\RouterExceptions;
 
 
 use Throwable;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Exceptions\ModelExceptions;
+namespace App\exceptions\ModelExceptions;
 
 
 use Throwable;

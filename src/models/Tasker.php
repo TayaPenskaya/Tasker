@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
 
-namespace App\Models;
+namespace App\models;
 
-use App\Core\View;
-use App\Exceptions\ModelExceptions\NoExistsTaskExeption;
-use App\Exceptions\ModelExceptions\SameTaskException;
+use App\core\View;
+use App\exceptions\ModelExceptions\NoExistsTaskExeption;
+use App\exceptions\ModelExceptions\SameTaskException;
 use Exception;
 
 class Tasker {

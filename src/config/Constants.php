@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Config;
+namespace App\config;
 
 
 class Constants {
@@ -17,10 +17,6 @@ class Constants {
         'tasks/show' => [
             'controller' => 'tasker',
             'action' => 'show'
-        ],
-        'tasks/add' => [
-            'controller' => 'tasker',
-            'action' => 'add'
         ],
         'admin/hello' => [
             'controller' => 'admin',

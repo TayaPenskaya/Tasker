@@ -4,7 +4,7 @@
 namespace App\controllers;
 
 
-use App\Core\View;
+use App\core\View;
 
 class AdminController extends \App\Core\Controller {
 

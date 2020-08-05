@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Controllers;
+namespace App\controllers;
 
 
-use App\Core\Controller;
-use App\Models\TaskerModel;
+use App\core\Controller;
+use App\models\TaskerModel;
 
 class TaskerController extends Controller {
     private TaskerModel $model;
